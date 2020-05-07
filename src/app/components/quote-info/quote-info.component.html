@@ -1,28 +1,38 @@
 <div class="container">
-  <div class="card bg-secondary">
-    <div class="card-body"  >
-      <div class="card item-card alert-dark" *ngFor="let quote of quotes; let i = index">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="col-md-4">
-              <i>posted by:</i>
-            </div>
-            <div class="col-md-8">
-              <h5 class="card-title">{{quote.submitterName  | titlecase}}</h5>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <p class="card-text"><i class="far fa-clock pr-2"></i>{{quote.postedDate | date}}</p>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addQuote($event)"></app-quote-form>
+    </div>
+    <div class="col-md-6">
+      <div class="container">
+        <div class="card bg-secondary">
+          <div class="card-body"  >
+            <div class="card item-card alert-dark" *ngFor="let quote of quotes; let i = index">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="col-md-4">
+                    <i>posted by:</i>
+                  </div>
+                  <div class="col-md-8">
+                    <h5 class="card-title">{{quote.submitterName  | titlecase}}</h5>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <p class="card-text"><i class="far fa-clock pr-2"></i>{{quote.postedDate | date}}</p>
+                </div>
+              </div>
 
 
-        <p class="quote">{{quote.quote}}</p>
-        <div>
-          <app-quote-detail [quote]="quote" *ngIf="quote.showDescription"></app-quote-detail>
-          <button class="btn alert-success" (click)="toggleQuote(i)">{{quote.showDescription ? 'Hide' : 'See'}} Quote</button>
+              <p class="quote">{{quote.quote}}</p>
+              <div>
+                <app-quote-detail [quote]="quote" *ngIf="quote.showDescription"></app-quote-detail>
+                <button class="btn alert-success" (click)="toggleQuote(i)">{{quote.showDescription ? 'Hide' : 'See'}} Quote</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+

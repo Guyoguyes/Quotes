@@ -1,0 +1,23 @@
+.card{
+  margin-top: 200px;
+  margin-left: -450px;
+  position: relative;
+  width: 600px;
+  height: 650px;
+}
+.hero{
+  padding-top: 20px;
+  color: black;
+  text-decoration: underline;
+}
+.form-group{
+  width: 500px;
+  padding-top: 50px;
+  padding: 5px;
+  padding-left: 40px;
+}
+label{
+  padding-left: 20px;
+  font-size: 20px;
+  color: black;
+}
