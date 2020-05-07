@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card alert-secondary">
+    <div class="card-body"  >
+      <div class="card item-card" *ngFor="let quote of quotes">
+        <h5 class="card-title">{{quote.submitterName}}</h5>
+        <p class="card-text"><i class="far fa-clock pr-2"></i>{{quote.postedDate | date}}</p>
+      </div>
+    </div>
+  </div>
+</div>
