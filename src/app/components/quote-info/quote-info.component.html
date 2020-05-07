@@ -2,8 +2,21 @@
   <div class="card bg-secondary">
     <div class="card-body"  >
       <div class="card item-card alert-dark" *ngFor="let quote of quotes; let i = index">
-        <i>posted by:</i><h5 class="card-title">{{quote.submitterName  | titlecase}}</h5>
-        <p class="card-text"><i class="far fa-clock pr-2"></i>{{quote.postedDate | date}}</p>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="col-md-4">
+              <i>posted by:</i>
+            </div>
+            <div class="col-md-8">
+              <h5 class="card-title">{{quote.submitterName  | titlecase}}</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p class="card-text"><i class="far fa-clock pr-2"></i>{{quote.postedDate | date}}</p>
+          </div>
+        </div>
+
+
         <p class="quote">{{quote.quote}}</p>
         <div>
           <app-quote-detail [quote]="quote" *ngIf="quote.showDescription"></app-quote-detail>
