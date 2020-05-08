@@ -26,7 +26,8 @@
               <p class="quote">{{quote.quote}}</p>
               <div>
                 <app-quote-detail [quote]="quote" *ngIf="quote.showDescription"></app-quote-detail>
-                <button class="btn alert-success" (click)="toggleQuote(i)">{{quote.showDescription ? 'Hide' : 'See'}} Quote</button>
+                <button class="btn alert-danger delete" *ngIf="quote.showDescription" (click)="deleteQuote(i)">Delete</button>
+                <button class="btn alert-success toggle" (click)="toggleQuote(i)">{{quote.showDescription ? 'Hide' : 'See'}} Quote</button>
               </div>
             </div>
           </div>

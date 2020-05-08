@@ -4,26 +4,38 @@
       <form #quoteForm='ngForm'  (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="submitterName">Submitter's Name</label>
-          <input type="text" class="form-control" id="submitterName" placeholder="name" name="submitterNam" [(ngModel)]="newQuote.submitterName" #name='ngModel'>
+          <input type="text" class="form-control" id="submitterName" placeholder="name" name="submitterName" [(ngModel)]="newQuote.submitterName" #submitterName='ngModel'>
+          <div class="validation alert-danger" [hidden]="submitterName.valid || submitterName.pristine ">
+            <p>Submitter Name Required</p>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="author">Author</label>
           <input type="text" class="form-control" id="author" placeholder="author" name="author" [(ngModel)]="newQuote.author" #author='ngModel'>
+          <div class="validation alert-danger" [hidden]="author.valid || author.pristine">
+            <p>Authors Name Required</p>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="quote">Quote</label>
           <textarea  id="quote"  rows="4" class="form-control" placeholder="quote..........." name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel'></textarea>
+          <div class="validation alert-danger" [hidden]="quote.valid || quote.pristine">
+            <p>Quote Required</p>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="postedDate">Submission Date</label>
           <input type="date" class="form-control" id="postedDate" placeholder="Date" name="postedDate" [(ngModel)]="newQuote.postedDate" #postedDate='ngModel'>
+          <div class="validation alert-danger" [hidden]="postedDate.valid || postedDate.pristine">
+            <p>Posted Date Required</p>
+          </div>
         </div>
 
         <div class="form-group">
-          <button class="btn btn-primary">Post Quote</button>
+          <button class="btn btn-primary" [disabled]="quoteForm.invalid">Post Quote</button>
         </div>
       </form>
     </div>

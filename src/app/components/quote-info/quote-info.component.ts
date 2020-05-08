@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Quote} from "../../model/quote";
 
 @Component({
@@ -15,6 +15,8 @@ export class QuoteInfoComponent implements OnInit {
     new Quote('Amisi', 'C. J. Cherryh', 'It is perfectly okay to write garbage—as long as you edit brilliantly.', new Date(2018, 10, 27))
     ]
 
+  @Output() isDelete = new EventEmitter<boolean>()
+
   constructor() { }
 
 
@@ -23,11 +25,10 @@ export class QuoteInfoComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-
-
   toggleQuote(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+
 
   ngOnInit() {
   }
