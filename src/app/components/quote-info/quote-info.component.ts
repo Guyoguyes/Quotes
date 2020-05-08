@@ -15,7 +15,7 @@ export class QuoteInfoComponent implements OnInit {
     new Quote('Amisi', 'C. J. Cherryh', 'It is perfectly okay to write garbage—as long as you edit brilliantly.', new Date(2018, 10, 27))
     ]
 
-  @Output() isDelete = new EventEmitter<boolean>()
+
 
   constructor() { }
 
@@ -29,6 +29,12 @@ export class QuoteInfoComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
+  deleteQuote(index){
+    let isDelete = confirm(`Are You sure you want to delete ${this.quotes[index].quote}`);
+    if (isDelete) {
+      this.quotes.splice(index, 1);
+    }
+  }
 
   ngOnInit() {
   }

@@ -23,4 +23,5 @@ label{
 }
 .validation{
   padding-top: 5px;
+  border: 1px solid red;
 }

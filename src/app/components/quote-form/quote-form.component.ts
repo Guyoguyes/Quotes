@@ -15,7 +15,7 @@ export class QuoteFormComponent implements OnInit {
 
   constructor() { }
 
-  onSubmit(){
+  onSubmit(form: NgForm){
     this.addQuote.emit(this.newQuote)
 
   }
