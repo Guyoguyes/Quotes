@@ -7,15 +7,15 @@ export class DownvoteDirective {
 
   constructor(private elem: ElementRef) { }
 
-  @HostListener('clicks') onClicks(){
-    this.voteDeco('red')
+  @HostListener('click') onClicks(){
+    this.voteDec('red');
   }
 
   @HostListener('dblclick') onDoubleClicks(){
-    this.voteDeco('none')
+    this.voteDec('none');
   }
 
-  private voteDeco(action: string){
+  private voteDec(action: string){
     this.elem.nativeElement.style.color = action;
   }
 

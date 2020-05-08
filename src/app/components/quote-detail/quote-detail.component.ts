@@ -13,16 +13,17 @@ export class QuoteDetailComponent implements OnInit {
 
   constructor() { }
 
+
+
   likeQuote(){
     this.quote.upVote = this.quote.upVote + 1;
-    const vote = this.quote.downVote
-    const newVote = vote - 1
+    let vote = this.quote.downVote;
+    let newVote = vote - 1;
     if(newVote >= 1){
-      return newVote
+      return newVote;
     }else{
-      return 0
+      return 0;
     }
-
   }
 
   dislikeQuote(){

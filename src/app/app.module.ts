@@ -13,6 +13,7 @@ import { UpvoteDirective } from './directive/upvote.directive';
 import { DownvoteDirective } from './directive/downvote.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { DownvoteDirective } from './directive/downvote.directive';
     DayCounterPipe,
     UpvoteDirective,
     DownvoteDirective,
+
   ],
   imports: [
     BrowserModule,
