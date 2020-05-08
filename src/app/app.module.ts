@@ -9,6 +9,9 @@ import { QuoteInfoComponent } from './components/quote-info/quote-info.component
 import { QuoteDetailComponent } from './components/quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { DayCounterPipe } from './pipe/day-counter.pipe';
+import { UpvoteDirective } from './directive/upvote.directive';
+import { DownvoteDirective } from './directive/downvote.directive';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { DayCounterPipe } from './pipe/day-counter.pipe';
     QuoteInfoComponent,
     QuoteDetailComponent,
     QuoteFormComponent,
-    DayCounterPipe
+    DayCounterPipe,
+    UpvoteDirective,
+    DownvoteDirective,
   ],
   imports: [
     BrowserModule,
