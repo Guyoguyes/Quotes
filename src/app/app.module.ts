@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuoteInfoComponent } from './components/quote-info/quote-info.component';
 import { QuoteDetailComponent } from './components/quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
+import { DayCounterPipe } from './pipe/day-counter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuoteFormComponent } from './components/quote-form/quote-form.component
     NavbarComponent,
     QuoteInfoComponent,
     QuoteDetailComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    DayCounterPipe
   ],
   imports: [
     BrowserModule,
