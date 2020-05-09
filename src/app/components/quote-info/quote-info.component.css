@@ -1,3 +1,7 @@
+.container-fluid{
+  display: grid;
+  width: auto;
+}
 .card{
   margin-top: 100px;
   margin-left: 250px;
@@ -6,7 +10,7 @@
 }
 .item-card{
   width: 500px;
-  position: center;
+  /*position: center;*/
   margin: 35px;
   margin-left: 40px;
   height: auto;
@@ -31,3 +35,17 @@
   margin-bottom: 10px;
   float: right;
 }
+@media (min-width: 760px) {
+  .container-fluid{
+    width: auto;
+  }
+  .vote{
+      margin-right: 400px;
+    }
+}
+/*@media all {*/
+/*  .card{*/
+/*    width: 300px;*/
+/*    margin-right: 300px;*/
+/*  }*/
+/*}*/

@@ -1,6 +1,6 @@
 .card{
   margin-top: 200px;
-  margin-left: -450px;
+  /*margin-left: -450px;*/
   position: relative;
   width: 600px;
   height: auto;
@@ -28,4 +28,10 @@ label{
 }
 .field{
   border: 1px solid red;
+}
+@media (min-width: 760px) {
+  .container{
+    margin-left: 400px;
+    width: auto;
+  }
 }

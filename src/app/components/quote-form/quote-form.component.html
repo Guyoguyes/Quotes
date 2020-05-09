@@ -1,46 +1,48 @@
-<div class="container">
+<div class="conatiner">
   <div class="card alert-success">
     <h4 class="hero text-center">Post A Quote</h4>
-      <form #quoteForm='ngForm'  (ngSubmit)="onSubmit(quoteForm)">
-        <div class="form-group">
-          <label for="submitterName">Submitter's Name</label>
-          <input type="text" class="form-control" id="submitterName" placeholder="name" name="submitterName" [(ngModel)]="newQuote.submitterName" #submitterName='ngModel'
-                  [class.field]="quoteForm.submitted && submitterName.invalid" required>
-          <div [hidden]="submitterName.valid || !quoteForm.submitted " class="validation alert alert-danger" >
-            <p>Submitter Name Required</p>
-          </div>
+    <form #quoteForm='ngForm'  (ngSubmit)="onSubmit(quoteForm)">
+      <div class="form-group">
+        <label for="submitterName">Submitter's Name</label>
+        <input type="text" class="form-control" id="submitterName" placeholder="name" name="submitterName" [(ngModel)]="newQuote.submitterName" #submitterName='ngModel'
+               [class.field]="quoteForm.submitted && submitterName.invalid" required>
+        <div [hidden]="submitterName.valid || !quoteForm.submitted " class="validation alert alert-danger" >
+          <p>Submitter Name Required</p>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label for="author">Author</label>
-          <input type="text" class="form-control" id="author" placeholder="author" name="author" [(ngModel)]="newQuote.author" #author='ngModel'
-                  [class.field]="quoteForm.submitted && author.invalid" required="required">
-          <div [hidden]="author.valid || !quoteForm.submitted" class="validation alert alert-danger" >
-            <p>Authors Name Required</p>
-          </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" placeholder="author" name="author" [(ngModel)]="newQuote.author" #author='ngModel'
+               [class.field]="quoteForm.submitted && author.invalid" required="required">
+        <div [hidden]="author.valid || !quoteForm.submitted" class="validation alert alert-danger" >
+          <p>Authors Name Required</p>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label for="quote">Quote</label>
-          <textarea  id="quote"  rows="4" class="form-control" placeholder="quote..........." name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel'
-                      [class.field]="quoteForm.submitted && quote.invalid" required="required"></textarea>
-          <div [hidden]="quote.valid || !quoteForm.submitted" class="validation alert alert-danger" >
-            <p>Quote Required</p>
-          </div>
+      <div class="form-group">
+        <label for="quote">Quote</label>
+        <textarea  id="quote"  rows="4" class="form-control" placeholder="quote..........." name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel'
+                   [class.field]="quoteForm.submitted && quote.invalid" required="required"></textarea>
+        <div [hidden]="quote.valid || !quoteForm.submitted" class="validation alert alert-danger" >
+          <p>Quote Required</p>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label for="postedDate">Submission Date</label>
-          <input type="date" class="form-control" id="postedDate" placeholder="Date" name="postedDate" [(ngModel)]="newQuote.postedDate" #postedDate='ngModel'
-                  [class.field]="quoteForm.submitted && postedDate.invalid" required="required">
-          <div  [hidden]="postedDate.valid || !quoteForm.submitted" class="validation alert alert-danger" >
-            <p>Posted Date Required</p>
-          </div>
+      <div class="form-group">
+        <label for="postedDate">Submission Date</label>
+        <input type="date" class="form-control" id="postedDate" placeholder="Date" name="postedDate" [(ngModel)]="newQuote.postedDate" #postedDate='ngModel'
+               [class.field]="quoteForm.submitted && postedDate.invalid" required="required">
+        <div  [hidden]="postedDate.valid || !quoteForm.submitted" class="validation alert alert-danger" >
+          <p>Posted Date Required</p>
         </div>
+      </div>
 
-        <div class="form-group">
-          <button class="btn btn-primary" [disabled]="quoteForm.invalid" >Post Quote</button>
-        </div>
-      </form>
-    </div>
+      <div class="form-group">
+        <button class="btn btn-primary" [disabled]="quoteForm.invalid" >Post Quote</button>
+      </div>
+    </form>
+  </div>
 </div>
+
+
